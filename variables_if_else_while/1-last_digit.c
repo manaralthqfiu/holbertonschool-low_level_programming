@@ -9,9 +9,22 @@
  */
 int main(void)
 {
-	int n = 98;
-	int last_digit = n % 10;
 
+	int n;
+	int last_digit;
+
+	n = 98;
+	last_digit = n % 10;
+	printf("Last digit of %d is %d ", n, last_digit);
+/* ... */
+	n = -98;
+	last_digit = n % 10;
+	printf("Last digit of %d is %d ", n, last_digit);
+/* ... */
+	n = 980;
+	last_digit = n % 10;
+	printf("Last digit of %d is %d ", n, last_digit);
+/* ... */
 	printf("Last digit of %d is %d ", n, last_digit);
 	if (last_digit > 5)
 {
