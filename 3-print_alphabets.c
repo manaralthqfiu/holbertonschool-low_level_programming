@@ -6,20 +6,14 @@
 */
 int main(void)
 {
-	char lower[] = "abcdefghijklmnopqrstuvwxyz";
-	char upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int i = 0;
-while (lower[i] != '\0')
-{
-	putchar(lower[i]);
-	i++;
-}
-	i = 0;
-	while (upper[i] != '\0')
-{
-	putchar(upper[i]);
-	i++;
-}
+	char ch;
+
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
+
+	for (ch = 'A'; ch <= 'Z'; ch++)
+		putchar(ch);
+
 	putchar('\n');
 	return (0);
 }
