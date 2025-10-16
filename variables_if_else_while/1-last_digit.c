@@ -11,8 +11,8 @@
  */
 int main(void)
 {
-	int n;
-	int last_digit;
+	int n = 98;
+	int last_digit = n % 10;
 
 	srand(time(0));
 	n = rand();
