@@ -20,9 +20,9 @@ int _atoi(char *s)
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			result = result * 10 + (s[i] - '0');
-			started = 1;
+			found_digit = 1;
 		}
-		else if (started)
+		else if (found_digit)
 			break;
 		i++;
 	}
