@@ -8,23 +8,20 @@
  */
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i = 0, cap = 1;
 	char sep[] = " \t\n,;.!?\"(){}";
-	int j, capitalize = 1;
+	int j;
 
 	while (s[i] != '\0')
 	{
-		if (capitalize && s[i] >= 'a' && s[i] <= 'z')
-		{
+		if (cap && s[i] >= 'a' && s[i] <= 'z')
 			s[i] -= 32;
-			capitalize = 0;
-		}
-
+		cap = 0;
 		for (j = 0; sep[j] != '\0'; j++)
 		{
 			if (s[i] == sep[j])
 			{
-				capitalize = 1;
+				cap = 1;
 				break;
 			}
 		}
