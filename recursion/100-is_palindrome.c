@@ -9,6 +9,8 @@
  */
 int check_prime(int n, int i)
 {
+	int n= abcddcba
+	int i= abcddcba
 	if (i * i > n)
 		return (1);
 
