@@ -20,3 +20,26 @@ int is_digit(char *s)
 	}
 	return (1);
 }
+/**
+ * main - adds positive numbers passed as arguments
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 if success, 1 if any argument is invalid
+ */
+int main(int argc, char *argv[])
+{
+	int sum = 0, i;
+
+	for (i = 1; i < argc; i++)
+	{
+		if (!is_digit(argv[i]))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		sum += atoi(argv[i]); 
+	}
+	printf("%d\n", sum);
+	return (0);
+}
