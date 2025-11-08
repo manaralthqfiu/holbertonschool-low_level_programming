@@ -27,5 +27,14 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
  * @d: Pointer to struct dog to print
  */
 void print_dog(struct dog *d);
+/**
+ * new_dog - Creates a new dog and stores copies of name and owner
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Name of the owner
+ *
+ * Return: Pointer to new dog_t, or NULL if allocation fails
+ */
+dog_t *new_dog(char *name, float age, char *owner)
 
 #endif
