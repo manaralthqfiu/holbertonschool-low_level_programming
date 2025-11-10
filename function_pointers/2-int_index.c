@@ -9,7 +9,7 @@
  * Return: Index of first matching element, or -1 if none match or size <= 0
  */
 int int_index(int *array, int size, int (*cmp)(int))
-{ 
+{
 	int size i;
 	if (array == NULL || cmp == NULL || size <= 0)
 		return (-1);
@@ -17,5 +17,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 		if (cpm(array[i]) != 0)
 			return (i);
 }
+
 return (-1);
 }
