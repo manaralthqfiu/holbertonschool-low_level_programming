@@ -26,5 +26,12 @@ void print_numbers(const char *separator, const unsigned int n, ...);
  * Return: Nothing (void)
  */
 void print_strings(const char *separator, const unsigned int n, ...);
+/**
+ * print_all - Prints anything based on format string
+ * @format: A string of format specifiers (c, i, f, s)
+ *
+ * Return: Nothing (void)
+ */
+void print_all(const char * const format, ...);
 
 #endif
