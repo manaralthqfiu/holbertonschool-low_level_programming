@@ -35,8 +35,9 @@ void print_all(const char * const format, ...)
 				printf("%s%s", sep, str);
 				break;
 		}
-		sep = ", ";
-		i++;
+		if (*sep == '\0')
+			sep = ", ";
+		i++
 	}
 
 	va_end(args);
