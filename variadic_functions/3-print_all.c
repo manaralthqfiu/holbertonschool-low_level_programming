@@ -35,8 +35,7 @@ void print_all(const char * const format, ...)
 				printf("%s%s", sep, str);
 				break;
 		}
-		if (*sep == '\0')
-			sep = ", ";
+		sep = ", ";
 		i++
 	}
 
