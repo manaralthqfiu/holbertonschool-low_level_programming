@@ -27,11 +27,14 @@ list_t *add_node(list_t **head, const char *str)
 		free(new_node);
 		return (NULL);
 	}
+	len = 0
+		while (dup[len] != '\0')
+			len++;
 
 	new_node->str = dup_str;
 	new_node->len = strlen(dup_str);
 	new_node->next = *head;
 	*head = new_node;
-	
+
 	return (new_node);
 }
