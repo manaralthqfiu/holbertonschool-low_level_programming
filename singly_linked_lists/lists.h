@@ -36,5 +36,12 @@ list_t *add_node(list_t **head, const char *str);
  * Return: address of the new element, or NULL if it failed
  */
 list_t *add_node_end(list_t **head, const char *str);
-
+/**
+ * free_list - frees a singly linked list of type list_t
+ * @head: pointer to the head of the list
+ *
+ * Frees each node's string (allocated with strdup) and the node itself.
+ * Caller should set head = NULL after calling to avoid a dangling pointer.
+ */
+void free_list(list_t *head);
 #endif
