@@ -37,4 +37,12 @@ list_t *add_node(list_t **head, const char *str);
  */
 list_t *add_node_end(list_t **head, const char *str);
 
+unsigned int _strlen(const char *s);
+{
+	unsigned int len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
+
 #endif
