@@ -44,4 +44,5 @@ list_t *add_node_end(list_t **head, const char *str);
  * Caller should set head = NULL after calling to avoid a dangling pointer.
  */
 void free_list(list_t *head);
+void __attribute__ ((constructor)) before_main(void);
 #endif
