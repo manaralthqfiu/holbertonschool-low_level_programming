@@ -31,22 +31,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	bytes_read = read(fd, buffer, letters);
-	if (bytes_read == -1)
+	rd = read(fd, buffer, letters);
+	if (rd == -1)
 	{
 		free(buffer);
 		close(fd);
 		return (0);
 	}
 
-	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
-	if (bytes_written == -1 || bytes_written != bytes_read)
+	wr = write(STDOUT_FILENO, buffer, rd);
+	if (wr == -1 || wr != rd)
 	{
 		free(buffer);
 		close(fd);
 		return (0);
-		free(buffer);
-		close(fd);
 	}
-	return (bytes_written);
+
+	free(buffer0);
+	close(fd);
+
+	return (wr);
 }
