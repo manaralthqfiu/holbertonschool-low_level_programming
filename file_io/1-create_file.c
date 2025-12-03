@@ -26,7 +26,7 @@ int create_file(const char *filename, char *text_content)
 		while (text_content[len] != '\0')
 			len++;
 
-		wr= write(fd, text_content, len);
+		wr = write(fd, text_content, len);
 		if (wr == -1 || wr != len)
 		{
 			close(fd);
